@@ -837,7 +837,12 @@ ifconfig-pool-persist ipp.txt" >>/etc/openvpn/server.conf
 		echo 'push "dhcp-option DNS 45.90.28.167"' >>/etc/openvpn/server.conf
 		echo 'push "dhcp-option DNS 45.90.30.167"' >>/etc/openvpn/server.conf
 		;;
-	13) # Custom DNS
+	13) # Hetzner
+		echo 'push "dhcp-option DNS 213.133.100.100"' >>/etc/openvpn/server.conf
+		echo 'push "dhcp-option DNS 213.133.99.99"' >>/etc/openvpn/server.conf
+		echo 'push "dhcp-option DNS 213.133.98.98"' >>/etc/openvpn/server.conf
+		;;
+	14) # Custom DNS
 		echo "push \"dhcp-option DNS $DNS1\"" >>/etc/openvpn/server.conf
 		if [[ $DNS2 != "" ]]; then
 			echo "push \"dhcp-option DNS $DNS2\"" >>/etc/openvpn/server.conf
